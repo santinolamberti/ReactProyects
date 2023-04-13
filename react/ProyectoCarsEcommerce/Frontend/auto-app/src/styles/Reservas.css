@@ -1,0 +1,346 @@
+/* HEADER */
+.booking-header {
+  display: flex;
+  flex-direction: column;
+}
+.booking-header-titles {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--three-color);
+}
+.booking-header-titles div {
+  display: flex;
+  flex-direction: column;
+  margin-left: 3%;
+  text-align: left;
+}
+.booking-header-titles div h1,
+.booking-header-titles div h4 {
+  color: #ffffff;
+  line-height: 1em;
+}
+.back-arrow {
+  margin-right: 3%;
+}
+.back-arrow a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 40px
+}
+
+/* MAIN DETAILS */
+.booking-main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 37px;
+}
+.booking-main h1 {
+  margin-left: 3%;
+  margin-bottom: 16px;
+}
+
+
+/* SECCIONES DEL MAIN */
+.booking-sections {
+  width: 100%; 
+  display: flex;
+  justify-content: space-between;
+  padding: 0 3.1%;
+}
+
+
+/* DATOS DEL USUARIO Y RESERVA */
+.booking-data {
+  width: 66%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.booking-data > div {
+  width: 100%;
+}
+.booking-data-form {
+  height: 217px;
+  border: 1px solid #DFE4EA;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  margin-bottom: 35px;
+}
+.booking-calendar {
+  height: 297px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  margin-bottom: 36px;
+}
+.booking-data-horario {
+  height: 144px;
+  border: 1px solid #DFE4EA;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+}
+.booking-data h1 {
+  margin-left: 0;
+}
+
+/* DATOS DEL PRODUCTO */
+.booking-details {
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid #DFE4EA;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+}
+.booking-details h1 {
+  width: 90.5%;
+  text-align: left;
+  margin: 24px auto 18px;
+  font-size: 24px;
+}
+.booking-details-image {
+  height: 300px;
+  width: 100%;
+  margin-bottom: 43px;
+}
+.booking-details-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.booking-image-info {
+  width: 100%;
+}
+.booking-details-info {
+  width: 90.5%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 auto 20px;
+}
+.booking-details-info h4 {
+  line-height: 10px;
+  font-size: 14px;
+}
+.booking-details-info h1 {
+  margin: 0 0 2px 0;
+}
+.details-stars {
+  margin-bottom: 17px;
+  margin-left: 2px;
+}
+.details-stars i {
+  color: var(--main-color);
+  font-size: 14px;
+}
+.booking-details-location {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.booking-details-location div {
+  width: 100%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 8px;
+}
+.booking-details-location i {
+  font-size: 14px; 
+}
+.booking-details-location div p {
+  font-size: 14px;
+}
+.booking-details-check {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 28px;
+}
+.booking-details-divisor {
+  width: 90.5%;
+  border: 1px solid #BEBEBE;
+  margin-bottom: 19px;
+}
+.booking-details-divisor:nth-last-child(1){
+  margin-bottom: 0;
+}
+.checks {
+  width: 84.5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.check-in {
+  margin-bottom: 30px;
+}
+.check-out {
+  margin-top: 7px;
+  margin-bottom: 24px;
+}
+.checks p {
+  font-size: 16px;
+  font-weight: 700;
+}
+.btn-details {
+  width: 89%;
+  height: 50px;
+  margin: 0 auto;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
+  cursor: pointer;;
+}
+
+@media screen and (min-width: 480px) and (max-width:  768px){
+  .booking-main {
+    margin-top: 38px;
+  }
+  .booking-main h1 {
+    margin-left: 4%;
+    margin-bottom: 13px;
+  }
+
+  .booking-sections {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 3.9%;
+  }
+
+  .booking-data {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .booking-data h1 {
+    margin-left: 0;
+  }
+
+  .booking-calendar {
+    height: 312px;
+  }
+
+  .booking-details {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24px 3.5% 36px;
+  }
+  .booking-details h1 {
+    margin: 0 0 10px 0;
+  }
+  .booking-image-info {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .booking-details-image {
+    height: 396px;
+    width: 48.3%;
+    margin-bottom: 0;
+  }
+  .booking-details-image img {
+    border-radius: 5px;
+  }
+  .booking-info-container {
+    width: 49.2%;
+  }
+  .booking-details-info {
+    width: unset;
+  }
+  .checks {
+    width: 95%;
+  }
+  .booking-details-divisor {
+    width: 100%;
+  }
+  .btn-details {
+    width: 100%;
+  }
+
+}
+@media screen and (max-width: 480px){
+  .booking-main {
+    margin-top: 30px;
+  }
+  .booking-main h1 {
+    margin-left: 2.2%;
+    margin-bottom: 15px;
+  }
+
+  .booking-sections {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 2.9%;
+  }
+
+  .booking-data {
+    width: 100%;
+    margin-bottom: 47px;
+  }
+  .booking-data h1 {
+    margin-left: 2.2%;
+    text-align: left;
+  }
+
+  .booking-data-form {
+    height: 379px;
+    width: 95.4%;
+  }
+  /* ----- Esta propiedad hace parte del formDatos.css ----- */
+  div.inputs-formDatosUsuario div {
+    margin-left: 0;
+  }
+  .form-horarioLlegada p:nth-child(1) {
+    text-align: left;
+  }
+  /* ------------------------------------------------------- */
+
+  .booking-calendar {
+    height: 328px;
+  }
+  .divider-reserva {
+    display: none;
+  }
+
+  .booking-data-horario {
+    height: 163px;
+  }
+
+  .booking-details{
+    width: 100%;
+    height: 686px;
+  }
+  .booking-details h1:nth-child(1) {
+    margin: 24px auto 10px;
+  }
+  .booking-details-image {
+    height: 269px;
+    margin-bottom: 15px;
+  }
+  .booking-details-image img {
+    border-radius: 0px;
+  }
+  .booking-details-info {
+    margin: 0 auto 20px;
+  }
+  .booking-details-info h1 {
+    margin-left: 0;
+    margin-bottom: 7px;
+  }
+  .booking-details-check {
+    margin-bottom: 26px;
+  }
+  .checks {
+    margin-bottom: 8px;
+  }
+
+}

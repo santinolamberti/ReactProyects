@@ -1,0 +1,150 @@
+.buscador {
+  background-color: rgba(25, 27, 29, 1);
+  width: 100%;
+  height: 149px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.titulo-buscador {
+  color: white;
+}
+
+.buscadores div.react-datepicker-wrapper {
+  padding: 0;
+  border: 0;
+  width: 31%;
+  margin: 0 0.6%;
+}
+
+.buscadores {
+  width: 100%;
+  margin-top: 23px;
+  display: flex;
+  justify-content: center;
+  /* padding-bottom: 15px; */
+}
+
+.boton-buscar {
+  height: 40px;
+  width: 15.1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: rgba(240, 87, 45, 1);
+  border-color: rgba(240, 87, 45, 1);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.buscadores select {
+  width: 31%;
+  height: 40px;
+  border-radius: 5px;
+  background: #ffffff;
+  box-shadow: 0px 1px 5px rgb(0 0 0 / 15%);
+}
+
+/* .p-inputtext{
+    width: 25vw;
+    height: 40px;
+    border-radius: 5px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 5px rgb(0 0 0 / 15%);
+}
+
+
+ .p-autocomplete-panel{
+    background-color: white;
+    position: absolute;
+    margin-top: 5px;
+} 
+
+.p-autocomplete-item{
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.p-autocomplete-item:hover {
+    cursor:pointer;
+    background-color: #f2f2f2;
+}
+
+.p-autocomplete-item::before{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 501;
+    content: "\f3c5";
+} 
+ 
+ul{
+    list-style: none;
+}*/
+
+@media screen and (max-width: 480px) {
+  .buscador {
+    height: 263px;
+  }
+  .titulo-buscador {
+    font-size: 30px;
+  }
+  .buscadores {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 14px;
+    margin-bottom: 0;
+  }
+  .buscadores div.react-datepicker-wrapper {
+    height: 36px;
+    width: 95%;
+    margin: 8px 0;
+  }
+  .buscadores select {
+    height: 38px;
+    width: 95%;
+  }
+  .boton-buscar {
+    width: 95%;
+  }
+  /* .p-inputtext{
+        width: 100%;
+    }
+    .p-autocomplete-item{
+        width: 100%;
+    } */
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .buscador {
+    height: 139px;
+    /* padding: 0px 12px; */
+  }
+  .titulo-buscador {
+    padding-top: 5px;
+  }
+  .boton-buscar {
+    width: 21.6%;
+  }
+  .buscadores select {
+    width: 33.1%;
+  }
+  .buscadores div.react-datepicker-wrapper {
+    width: 33.1%;
+    margin: 0 2.1%;
+  }
+  .buscadores {
+    margin-top: 18px;
+  }
+  /* .p-inputtext{
+        width: 100%;
+    }
+    .p-autocomplete-item{
+        width: 100%;
+    } */
+}

@@ -1,0 +1,124 @@
+/* Variables */
+:root {
+  --main-color: #f0572d;
+  --two-color: #383b58;
+  --three-color: #191b1d;
+  --three-color-with-opacity: rgba(84, 87, 118, 0.1);
+  --four-color: #dfe4ea;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+.opciones{
+  color: black;
+}
+.opciones-link {
+  background-color: #282c34;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* pantalla 1 Mobile home */
+@media screen and (max-width:  480px){
+
+.logo{
+  z-index: 10;
+}
+.logo-img{
+  height: 40px;
+  width: 55px;
+}
+.slogan{
+  display: none;
+}
+.crearCuenta, .iniciarSesion{
+  display: none;
+}
+.opciones{
+  font-size: 1.5em;
+  font-weight: 900;
+}
+.opciones-links {
+  text-align: right;
+  padding-top: 20px;
+  padding-right: 15px;
+}
+
+/* .buscador{
+  height: 30vh;
+  width: 95vw;
+  padding: 4px 4px;
+} */
+.buscadores{
+  flex-direction: column;
+  margin: 16px 10px; 
+}
+
+.category{
+  height: 1120px;
+  width: 100%;
+}
+.category h2{
+  font-size:20px;
+  margin: 0 0 3px 3.5%;
+}
+.type-container{
+  flex-direction: column;
+}
+.type-card{
+  width: 100%;
+  margin-bottom: 15px;
+}
+.type-card p{
+  margin: 0px 12px;
+  color:gray;
+  font-weight: 700;
+}
+.redes{
+  display: none;
+}
+.marca{
+  margin-left: 10px;
+  font-size: 14px;
+}
+footer{
+  height: 8vh;
+}
+}
+
+
+

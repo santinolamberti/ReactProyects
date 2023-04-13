@@ -1,0 +1,35 @@
+footer {
+    height: 58px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    background-color: rgba(240, 87, 45, 1);
+    color: #FFFFFF;
+    position: fixed;
+    bottom: 0;  
+}
+.marca{
+    margin-left: 25px;
+    font-weight: 700;
+}
+
+.redes {
+    height: 20px;
+    width: 14%;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 30px;
+    font-size: 23px;
+}
+
+@media screen and (min-width: 480px) and (max-width:  768px){
+    .redes {
+        width: 30%;
+    } 
+}
+@media screen and (max-width:  480px){
+    .redes {
+        display: none;
+    }  
+}

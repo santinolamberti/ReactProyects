@@ -1,0 +1,372 @@
+.titulo h1 {
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+.esqueleto-pagina h2 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.titulo {
+  height: 100%;
+  width: 95%;
+  text-align: left;
+}
+
+.inputs-crear-auto label {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+textarea {
+  resize: none;
+}
+
+.esqueleto-pagina {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(223, 228, 234, 1);
+}
+
+.form-crear-auto {
+  width: 95%;
+  height: 100%;
+  display: flex;
+  background-color: white;
+  border-radius: 5px;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: 0px 3px 2px grey;
+  margin-bottom: 100px;
+}
+
+.form-crear-auto input {
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.inputs-pegados div select {
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  height: 35px;
+  width: 90%;
+  border-radius: 5px;
+}
+
+.form-crear-auto .inputs-crear-auto .inputs-pegados input {
+  height: 35px;
+  width: 90%;
+  border-radius: 5px;
+}
+
+.inputs-crear-auto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.inputs-pegados {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.inputs-crear-auto .inputs-pegados div {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  margin-left: 3.7%;
+}
+
+.div-descripcion {
+  height: 160px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#descripcion {
+  height: 150px;
+  width: 92%;
+  border-radius: 5px;
+  margin-right: 13px;
+}
+
+.esqueleto-agregar-atributo {
+  width: 95%;
+  height: 105px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  background-color: rgba(223, 228, 234, 1);
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.div-nombre-atributo {
+  display: flex;
+  width: 65%;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.div-select-icono {
+  width: 29%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.agregar-icono {
+  width: 100%;
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.agregar-icono input {
+  width: 80%;
+  height: 35px;
+  border-radius: 5px;
+}
+.agregar-icono label {
+  margin-bottom: 0px;
+}
+
+#nombre-atributo,
+#icono {
+  height: 35px;
+  border-radius: 5px;
+}
+
+#nombre-atributo {
+  width: 100%;
+}
+
+#icono {
+  width: 100%;
+}
+
+/* .agregar-icono .fas {
+  margin-top: 38.5px;
+} */
+
+.mas-agregar-atributo {
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.mas, .cruz {
+  font-size: 39.4px;
+}
+
+.mas {
+  color: rgba(240, 87, 45, 1);
+}
+
+.cruz {
+  color: white;
+  background-color: var(--three-color);
+  margin-top: 10px;
+  margin-right: 15px;
+  border-radius: 5px;
+}
+
+.fa-plus-square:hover {
+  cursor: pointer;
+}
+
+.esqueleto-politicas {
+  width: 95%;
+  height: 100%;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.politicas {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-align: left;
+}
+
+.politicas div {
+  width: 30%;
+}
+
+.politics {
+  width: 100%;
+  height: 200px;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.esqueleto-cargar-imagenes {
+  width: 95%;
+  height: 105px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  background-color: rgba(223, 228, 234, 1);
+}
+
+.cargar-imagen {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cargar-imagen div {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: center;
+}
+
+.cargar-imagen input {
+  width: 80%;
+  height: 35px;
+  border-radius: 5px;
+}
+
+.submit-crear {
+  height: 35px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: rgba(240, 87, 45, 1);
+  width: 25%;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 35px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  box-shadow: 0px 3px 2px grey;
+}
+
+.submit-crear:hover {
+  cursor: pointer;
+}
+
+.campo-incompleto {
+  display: none;
+}
+
+.mostrar-campo-incompleto{
+  display: block;
+}
+
+.mas-agregar-atributo {
+  width: auto;
+  height: auto;
+}
+
+@media screen and (min-width: 480px) and (max-width:  768px){
+    .politicas{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .politics{
+      height: 150px;
+    }
+
+    .politicas div {
+      width: 95%
+    }
+
+    .submit-crear {
+      width: 45%;
+    }
+
+    .esqueleto-agregar-atributo {
+      height: 181px;
+    }
+
+    .agregar-icono {
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 20px;
+      margin-bottom: 32px;
+    }
+
+    .div-nombre-atributo {
+      width: 90%;
+    }
+
+    .div-select-icono {
+      width: 90%;
+    }
+
+    .mas-agregar-atributo {
+      margin-right: 30px;
+    }
+
+    .cruz {
+      margin-right: 32px;
+    }
+
+  }
+
+@media screen and (max-width: 480px) {
+  .politicas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .politics{
+    height: 100px;
+  }
+
+  .politicas div {
+    width: 95%
+  }
+
+  .submit-crear {
+    width: 45%;
+  }
+
+  .esqueleto-agregar-atributo {
+    height: 181px;
+  }
+
+  .agregar-icono {
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 20px;
+    margin-bottom: 32px;
+  }
+
+  .div-nombre-atributo {
+    width: 90%;
+  }
+
+  .div-select-icono {
+    width: 90%;
+  }
+
+  .mas-agregar-atributo {
+    margin-right: 30px;
+  }
+
+  .cruz {
+    margin-right: 32px;
+  }
+}
+

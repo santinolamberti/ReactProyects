@@ -1,0 +1,65 @@
+.form-datosUsuario {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: white;
+  border-radius: 5px;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: 0px 3px 2px grey;
+}
+
+.form-datosUsuario input {
+  height: 35px;
+  width: 90%;
+}
+
+.inputs-formDatosUsuario {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.inputs-formDatosUsuario div {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  margin-left: 3.7%;
+}
+
+.inputs-formDatosUsuario div label,
+.inputs-formDatosUsuario div input {
+  color: var(--two-color);
+}
+
+/* @media screen and (min-width: 480px) and (max-width:  768px){
+    .form-datosUsuario {
+        width: 97%;
+    }
+} */
+
+@media screen and (max-width: 480px) {
+  .datosUsuario {
+    height: 333px;
+    width: 97%;
+  }
+
+  .inputs-formDatosUsuario {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .inputs-formDatosUsuario div {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}

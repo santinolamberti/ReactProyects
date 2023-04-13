@@ -1,0 +1,791 @@
+{
+	"info": {
+		"_postman_id": "0e8f9b3f-28dd-472a-b5f8-10a9c0e0bb91",
+		"name": "Proyecto-Digital-Cars",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Sprint 2",
+			"item": [
+				{
+					"name": "POST-Producto",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Responde con 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Validar atributo: nombre\", function () {\r",
+									"    var response = pm.response.json();\r",
+									"    pm.expect(pm.response.text()).to.include(\"nombre\")\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validar atributo: descripcion\", function () {\r",
+									"    var response = pm.response.json();\r",
+									"    pm.expect(pm.response.text()).to.include(\"descripcion\")\r",
+									"    });"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Bugatti Test\",\r\n    \"descripcion\": \"Negro\",\r\n    \"categoria\": { \r\n        \"id\": 1\r\n    },\r\n    \"ciudad\": {\r\n        \"id\": 1\r\n    },\r\n    \"caracteristicas\": [{\r\n        \"nombre\": \"Test\"\r\n    }],\r\n    \"imagenes\": [{\r\n        \"icono\": \"coche\"\r\n    }]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/productos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET-Producto",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Responde con 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"var response = pm.response.json();\r",
+									"\r",
+									"pm.test(\"El id es: 1\", function () {\r",
+									"    pm.expect(response.id).to.equal(1);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"El nombre es: Mazda\", function () {\r",
+									"    pm.expect(response.nombre).to.equal(\"Mazda\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"La descripcion es: An intense commitment to your total satisfaction, that's The Mazda Way.\", function () {\r",
+									"    pm.expect(response.descripcion).to.equal(\"An intense commitment to your total satisfaction, that's The Mazda Way.\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Test JSON\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validando atributos: nombre, descripcion, categoria, ciudad\", function () {\r",
+									"    pm.expect(pm.response.text()).to.includes(\"nombre\", \"descripcion\", \"categoria\", \"ciudad\", \"imagenes\", \"caracteristicas\")});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/productos/buscar/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"productos",
+								"buscar",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET-AllProducto",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Responde con 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"var response = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Test JSON\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validando atributos: nombre, descripcion, categoria, ciudad, imagenes, caracteristicas\", function () {\r",
+									"    pm.expect(pm.response.text()).to.includes(\"nombre\", \"descripcion\", \"categoria\", \"ciudad\", \"imagenes\", \"caracteristicas\")});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/productos/todos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"productos",
+								"todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST-Ciudad",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Responde con 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"var response = pm.response.json();\r",
+									"\r",
+									"\r",
+									"pm.test(\"Validar atributo: nombre\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"nombre\")});\r",
+									"\r",
+									"pm.test(\"Validar atributo: pais\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"pais\")});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Rosario\",\r\n    \"pais\": \"Argentina\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/ciudades",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ciudades"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET-AllCiudad",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Responde con 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"var response = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Test JSON\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validar atributos: nombre y pais\", function () {\r",
+									"    pm.expect(pm.response.text()).to.includes(\"nombre\", \"pais\")});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ciudades/todas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ciudades",
+								"todas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Prod-Cat",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Responde con 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"var response = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Test JSON\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/productos/categoria?titulo=autos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"productos",
+								"categoria"
+							],
+							"query": [
+								{
+									"key": "titulo",
+									"value": "autos"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Prod-Ciu",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Responde con 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"var response = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Test JSON\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/productos/ciudad?nombre=bogota",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"productos",
+								"ciudad"
+							],
+							"query": [
+								{
+									"key": "nombre",
+									"value": "bogota"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sprint 1",
+			"item": [
+				{
+					"name": "POST-Categorias",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Responde con 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"var response = pm.response.json();\r",
+									"\r",
+									"\r",
+									"pm.test(\"Validar atributo: titulo\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"titulo\")\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validar atributo: descripcion\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"descripcion\")\r",
+									"    });\r",
+									"\r",
+									"pm.test(\"Validar atributo: url\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"url\")\r",
+									"    });"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"autos0KM\",\r\n    \"descripcion\": \"gama alta\",\r\n    \"url\": \"autosgamaalta.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/categorias",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categorias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET-Categorias",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Responde con 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"La categoría es: Autos\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.titulo).to.equal(\"Autos\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validar atributos: titulo, descripcion, url\", function () {\r",
+									"    pm.expect(pm.response.text()).to.includes(\"titulo\", \"descripcion\", \"url\")});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/categorias/buscar?titulo=autos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categorias",
+								"buscar"
+							],
+							"query": [
+								{
+									"key": "titulo",
+									"value": "autos"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT-Categorias",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Responde con 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"autos\",\r\n    \"descripcion\": \"gama alta\",\r\n    \"url\": \"autogamaalta.com\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/categorias/modificar/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categorias",
+								"modificar",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT-TIT-Categorias",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Responde con 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"motitos\",\r\n    \"descripcion\": \"gama bajita\",\r\n    \"url\": \"motosgamabaja.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/categorias/modificar?titulo=",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categorias",
+								"modificar"
+							],
+							"query": [
+								{
+									"key": "titulo",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DEL-Categorias",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Responde con 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/categorias/eliminar?titulo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categorias",
+								"eliminar"
+							],
+							"query": [
+								{
+									"key": "titulo",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DEL-ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Responde con 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/categorias/eliminar/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categorias",
+								"eliminar",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET-Todas",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Responde con 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validar atributos: nombre, descripcion, url\", function () {\r",
+									"    pm.expect(pm.response.text()).to.includes(\"titulo\", \"descripcion\", \"url\")});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/categorias/todos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categorias",
+								"todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET- ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Responde con 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"La categoría es: Buses\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.titulo).to.equal(\"Buses\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"La descripción es: 35 Buses\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.descripcion).to.equal(\"35 Buses\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"La URL es: https://buimagenes.s3.us-east-2.amazonaws.com/img/Categoria_buses.jpeg\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.url).to.equal(\"https://buimagenes.s3.us-east-2.amazonaws.com/img/Categoria_buses.jpeg\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/categorias/buscar/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categorias",
+								"buscar",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tests",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Responde con 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"El id es: 3\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.id).to.equal(3);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"La categoría es: Motos\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.titulo).to.equal(\"Motos\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"La descripción es: 30 Motos\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.descripcion).to.equal(\"30 Motos\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"La URL es: https://buimagenes.s3.us-east-2.amazonaws.com/img/Categoria_motos.jpeg\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.url).to.equal(\"https://buimagenes.s3.us-east-2.amazonaws.com/img/Categoria_motos.jpeg\");\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/categorias/buscar/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categorias",
+								"buscar",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

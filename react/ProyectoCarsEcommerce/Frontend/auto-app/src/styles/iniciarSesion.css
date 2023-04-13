@@ -1,0 +1,160 @@
+.logIn {
+  background-color: rgba(223, 228, 234, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.titulo-inicio {
+  color: rgba(240, 87, 45, 1);;
+  padding-top: 30px;
+  padding-top: 85px;
+}
+
+.form-iniciarSesion {
+  width: 25.735294117647058vw;
+  height: 70vh; 
+  margin: auto;
+  display: flex;
+  position:relative;
+  justify-content: center;
+}
+
+.inputs-inicio {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+.password {
+  position: absolute;
+  line-height: 35px;
+  right: 5px;;
+}
+
+.labels-inicio {
+  margin-top: 10px;
+  text-align: left;
+  width: 100%;
+}
+
+.campos-inicio {
+  border-radius: 5px;
+  height: 35px;
+  width: 100%;
+  position:relative;
+  border: none;
+  box-shadow: 0px 3px 2px grey;
+  }
+::placeholder{
+  padding-left: 15px;
+  }
+  
+
+#boton-iniciarSesion {
+  height: 35px;
+  margin-top: 30px;
+  background-color: rgba(240, 87, 45, 1);
+  width: 100%; 
+  border: none;
+  border-radius: 5px;
+  padding: 10px 35px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  box-shadow: 0px 3px 2px grey;
+}
+
+#boton-iniciarSesion:hover {
+  cursor:pointer;
+}
+
+.texto-cuenta {
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.error-credenciales{
+  display: none;
+  color: rgba(176, 0, 32, 1);
+  background-color: rgba(255, 225, 225, 1);
+  width: 450px;
+  margin-left: 33%;
+  border-color: red;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 5px;
+}
+
+.credenciales-mostrar{
+  display: block;
+  width: auto;
+  font-size: 14px;
+  margin-right: 48px;
+}
+
+.no-logueado{
+  display: none;
+  width: 480px;
+  height: 50px;
+  background-color: rgba(255, 225, 225, 1);
+  border-radius: 5px;
+}
+
+.no-logueado p {
+  color: rgba(176, 0, 32, 1);
+}
+
+.mostrar-no-logueado{
+  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+
+/* pantalla 3 Mobile iniciarSesion */
+@media screen and (max-width:  480px){
+  .titulo-inicio{
+    font-size: 25px;
+    padding-top:20px;
+  }
+  .labels-inicio{
+    font-size: 13px;
+    gap: 0;
+  }
+  .inputs-inicio {
+    margin-top: 70px;
+  }
+  .form-iniciarSesion{
+    width: 75%;
+  }
+
+  #boton-iniciarSesion{
+    box-shadow: 0px 3px 2px grey;
+  }
+}
+@media screen and (min-width: 480px) and (max-width:  768px){
+  .form-iniciarSesion{
+    width:50vw;
+  }
+  .labels-inicio{
+    text-align: left;
+    font-size: 14px;
+  }
+  .inputs-inicio{
+    margin-top: 30px;
+  }
+  .campos-inicio{
+    width: 100%;
+  }
+  .texto-cuenta{
+    font-size: 13px;
+  }
+}

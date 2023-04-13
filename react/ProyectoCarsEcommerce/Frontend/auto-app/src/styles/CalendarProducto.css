@@ -1,0 +1,283 @@
+/* Tamaño del calendario */
+.commodity-container-calendar {
+  height: 297px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+/* Calendario */
+.commodity-calendar {
+  height: 100%;
+  width: 62.1%;
+  position: relative;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+.commodity-calendar > div {
+  height: 100%;
+}
+.commodity-calendar > div > div.react-datepicker {
+  width: 100%;
+  height: 100%;
+  padding: 31px 11.6% 0;
+  display: flex;
+  justify-content: center;
+  gap: 14.9%;
+}
+/* Para que los meses encajen en el contenedor */
+.commodity-calendar div.react-datepicker__month-container {
+  width: 100%;
+}
+/* Diseño de header */
+.commodity-calendar .react-datepicker__header {
+  margin-bottom: 21.3px;
+}
+/* Tamaño del contenedor del nombre los días */
+.commodity-calendar .react-datepicker__day-name {
+  width: 13.5px;
+  color: var(--three-color);
+}
+/* Contenedor de los números de los días del 1-31 */
+.commodity-calendar .react-datepicker__month {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+/* contenedor fila del día 1-7 */
+.commodity-calendar.react-datepicker__week {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Header del calendario */
+.header-calendar-producto {
+  position: static;
+  font-size: 14px;
+  margin-bottom: 21px;
+}
+/* Flechas de navegación */
+.navigation-arrows-producto {
+  position: absolute;
+  height: 35px;
+  width: 35px;
+  background: var(--main-color);
+  border-radius: 50%;
+  color: #ffffff;
+  border: none;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.12),
+    0px 1px 3px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  top: 40%;
+}
+.back-arrow-producto {
+  left: 2.4%;
+}
+.next-arrow-producto {
+  right: 2.4%;
+}
+.navigation-arrows-producto:hover {
+  border: 1px solid var(--four-color);
+}
+.navigation-arrows-producto i {
+  font-size: 15px;
+}
+/* Nombre de los días */
+.commodity-calendar .react-datepicker__day-names {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 700;
+}
+/* Contenedor fila del día 1-7 8-14 15-21 22-28 29-31 */
+.commodity-calendar .react-datepicker__week {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+/* contenedor del número */
+.commodity-calendar .react-datepicker__day {
+  width: 14.3px;
+  height: 14.3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* hover de los números de los días pasados */
+.commodity-calendar .react-datepicker__week div.react-datepicker__day--disabled.react-datepicker__day:hover {
+  background-color: transparent;
+  border-radius: 50%;
+  color: #BEBEBE;
+  font-weight: 500;
+  font-size: 12px;
+  cursor: default;
+  text-decoration: line-through;
+}
+/* Estilo de texto de los números */
+.producto-day-style {
+  font-size: 12px;
+  cursor: default;
+}
+/* Estilo para desactivar el hover encima de los números */
+.commodity-calendar .react-datepicker__week div.react-datepicker__day:hover {
+  background-color: transparent;
+  color: var(--three-color);
+}
+/* ESTILO GENERAL */
+/* Estilo para los días pasados */
+.react-datepicker__week div.react-datepicker__day.react-datepicker__day--disabled {
+  color: #BEBEBE;
+  cursor:default;
+  text-decoration: line-through;
+}
+.react-datepicker div.buscador-day-style.react-datepicker__day--disabled:hover {
+  color: #BEBEBE;
+  text-decoration: line-through;
+}
+/* CONTENEDOR DEL DÍA HOVERS */
+.react-datepicker__day--keyboard-selected:hover,
+.react-datepicker__month-text--keyboard-selected:hover,
+.react-datepicker__quarter-text--keyboard-selected:hover,
+.react-datepicker__year-text--keyboard-selected:hover {
+  background-color: var(--main-color);
+  border-radius: 50%;
+  color: #ffffff;
+}
+.react-datepicker__week div.react-datepicker__day:hover,
+.react-datepicker__week div.react-datepicker__month-text:hover,
+.react-datepicker__week div.react-datepicker__quarter-text:hover,
+.react-datepicker__week div.react-datepicker__year-text:hover {
+  background-color: var(--main-color);
+  border-radius: 50%;
+  color: #ffffff;
+}
+/* Divisor */
+.divider-producto {
+  position: absolute;
+  border: 1px solid #a8a8a8;
+  height: 81.2%;
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .commodity-container-calendar {
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .commodity-calendar {
+    height: 312.3px;
+    width: 91.2%;
+    margin-bottom: 29.53px;
+  }
+  .commodity-calendar > div > div.react-datepicker {
+    width: 100%;
+    height: 100%;
+    padding: 38px 6.1% 0;
+    display: flex;
+    justify-content: center;
+    gap: 13.5%;
+  }
+  .header-calendar-producto {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .commodity-calendar .react-datepicker__day-name {
+    width: 14.5px;
+  }
+  .navigation-arrows-producto {
+    height: auto;
+    width: auto;
+    position: relative;
+    background: transparent;
+    border-radius: none;
+    border: none;
+    box-shadow: none;
+    left: 0;
+    right: 0;
+  }
+  .navigation-arrows-producto:hover {
+    border: none;
+    opacity: 0.5;
+  }
+  .navigation-arrows-producto i {
+    color: #666666;
+  }
+  .react-datepicker__day-names {
+    margin-bottom: 0;
+  }
+  .commodity-calendar .react-datepicker__week {
+    margin-bottom: 16px;
+  }
+  .commodity-calendar .react-datepicker__day {
+    margin-bottom: 0;
+  }
+  .divider-producto {
+    height: 80%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .commodity-container-calendar {
+    height: auto;
+    flex-direction: column;
+  }
+  .commodity-calendar {
+    height: 328px;
+    width: 95.2%;
+    margin-bottom: 31px;
+  }
+  .divider-producto {
+    display: none;
+  }
+  .commodity-calendar div .react-datepicker {
+    height: 100%;
+    padding: 42px 13.2% 0;
+  }
+  .commodity-calendar .react-datepicker__month-container {
+    width: 100%;
+  }
+  .commodity-calendar .react-datepicker__header {
+    margin-bottom: 26px;
+  }
+  .commodity-calendar .react-datepicker__day-name {
+    width: 14px;
+  }
+  .commodity-calendar .react-datepicker__week {
+    margin-bottom: 20px;
+  }
+  .commodity-calendar .react-datepicker__day-names {
+    margin-bottom: 0;
+  }
+  .header-calendar-producto {
+    position: relative;
+    margin-bottom: 22px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .navigation-arrows-producto {
+    position: relative;
+    height: 14px;
+    width: 14px;
+    background: transparent;
+    border-radius: none;
+    color: #666666;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    left: 0;
+    right: 0;
+  }
+  .navigation-arrows-producto:hover {
+    border: none;
+    opacity: 1;
+  }
+  .navigation-arrows-producto i {
+    font-size: 14px;
+  }
+  .divider-producto {
+    display: none;
+  }
+}

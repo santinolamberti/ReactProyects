@@ -1,0 +1,29 @@
+.opciones-header{
+    background-color: rgba(240, 87, 45, 1);
+}
+ .opciones>p{
+    background-color: rgba(240, 87, 45, 1);
+    text-align: left;
+    padding-left: 10px;
+    font-weight: 700;  
+    height: 65px;
+    top: 0px;
+}
+.opciones-header>h2{
+    text-align: -webkit-right;
+    height: 80px;
+    padding-top: 40px;
+    padding-right: 15px;
+    margin-top: -1px;
+} 
+
+.opciones i{
+    font-family: FontAwesome;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    align-self: left;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+

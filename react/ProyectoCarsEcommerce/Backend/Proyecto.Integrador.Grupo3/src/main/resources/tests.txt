@@ -1,0 +1,71 @@
+♦ Ejemplos test para Postman:
+
+               [POST]
+(http://localhost:8080/categorias)
+{
+    "titulo": "autos",
+    "descripcion": "gama alta",
+    "url": "autogamaalta.com"
+}
+
+               [GET]
+ Petición para traer categoría mediante titulo:
+(http://localhost:8080/categorias/buscar?titulo=motos)
+
+               [GET]
+Petición para traer todas las categorías:
+(http://localhost:8080/categorias/todos)
+
+               [GET]
+Petición para traer categoría por ID:
+(http://localhost:8080/categorias/buscar/1)
+
+               [PUT]
+Petición para modificar categoría por ID:
+(http://localhost:8080/categorias/modificar/1)
+
+               [PUT]
+Petición para modificar categoría por titulo:
+(http://localhost:8080/categorias/modificar?titulo=motos)
+
+              [DELETE]
+ Petición para eliminar categoría mediante titulo:
+(http://localhost:8080/categorias/eliminar?titulo=autos)
+
+              [DELETE]
+ Petición para eliminar categoría mediante ID:
+(http://localhost:8080/categorias/1)
+
+
+             [Test] OK:
+(http://localhost:8080/categorias/buscar/1)
+
+pm.test("Responde con 200", function () {
+    pm.response.to.have.status(200);
+});
+
+
+pm.test("El id es: 1", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData.id).to.equal(1);
+});
+
+
+pm.test("La categoría es: autos", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData.titulo).to.equal("autos");
+});
+
+
+pm.test("La descripción es: gama alta", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData.descripcion).to.equal("gama alta");
+});
+
+
+pm.test("La URL es: autogamaalta.com", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData.url).to.equal("autogamaalta.com");
+});
+
+

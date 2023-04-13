@@ -1,0 +1,49 @@
+.form-horarioLlegada {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 10px 3%;
+    box-shadow: 0px 3px 2px grey;
+}
+.form-horarioLlegada p {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: var(--two-color);
+}
+.form-horarioLlegada p i {
+    font-size: 24px;
+    margin-right: 5px;
+    color: var(--two-color);
+}
+.form-horarioLlegada label {
+    font-size: 12px;
+    color: var(--two-color);
+}
+.form-horarioLlegada select {
+    width: 48%;
+    height: 35px;
+    color: var(--two-color);
+}
+
+@media screen and (min-width: 480px) and (max-width:  768px){
+    .horarioLlegada{
+        width: 97%;
+    }
+
+    .form-horarioLlegada select {
+        width: 97%;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .horarioLlegada{
+        width: 97%;
+    }
+
+    .form-horarioLlegada select {
+        width: 97%;
+    }
+}

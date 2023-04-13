@@ -1,0 +1,190 @@
+/* CALENDARIO */
+.booking-calendar > div,
+.booking-calendar > div > div.react-datepicker {
+  height: 100%;
+}
+.booking-calendar > div > div.react-datepicker {
+  width: 100%;
+  position: relative;
+  padding: 25px 11.6% 0;
+  display: flex;
+  justify-content: center;
+  gap: 14.9%;
+}
+.booking-calendar div.react-datepicker__month-container {
+  width: 100%;
+}
+.booking-calendar .react-datepicker__header {
+  margin-bottom: 10px;
+}
+.booking-calendar .react-datepicker__day-name {
+  width: 13.2px;
+  color: var(--three-color);
+}
+.booking-calendar .react-datepicker__month {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.booking-calendar.react-datepicker__week {
+  display: flex;
+  justify-content: space-between;
+}
+.header-calendar-reservas {
+  position: static;
+  font-size: 14px;
+  margin-bottom: 21px;
+}
+.navigation-arrows-reservas {
+  position: absolute;
+  height: 35px;
+  width: 35px;
+  background: var(--main-color);
+  border-radius: 50%;
+  color: #ffffff;
+  border: none;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.12),
+    0px 1px 3px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  top: 40%;
+}
+.back-arrow-reservas {
+  left: 2.4%;
+}
+.next-arrow-reservas {
+  right: 2.4%;
+}
+.navigation-arrows-reservas:hover {
+  border: 1px solid var(--four-color);
+}
+.navigation-arrows-reservas i {
+  font-size: 15px;
+}
+.booking-calendar .react-datepicker__day-names {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 700;
+}
+.booking-calendar .react-datepicker__week {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.booking-calendar .react-datepicker__day {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.booking-calendar .react-datepicker__week div.react-datepicker__day--disabled.react-datepicker__day:hover {
+  background-color: transparent;
+  border-radius: 50%;
+  color: #BEBEBE;
+  font-weight: 500;
+  font-size: 12px;
+  cursor: default;
+  text-decoration: line-through;
+}
+.reservas-day-style {
+  font-size: 12px;
+  cursor: pointer;
+}
+div.divider-reserva {
+  position: absolute;
+  border: 1px solid #a8a8a8;
+  height: 81.2%;
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .booking-calendar > div > div.react-datepicker {
+    width: 100%;
+    position: relative;
+    padding: 33px 6.1% 0;
+    display: flex;
+    justify-content: center;
+    gap: 13.5%;
+  }
+  .booking-calendar .react-datepicker__header {
+    margin-bottom: 15px;
+  }
+  .header-calendar-reservas {
+    position: relative;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .navigation-arrows-reservas {
+    position: relative;
+    height: auto;
+    width: auto;
+    background: transparent;
+    border-radius: none;
+    color: var(--three-color);
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    top: 0;
+    opacity: 0.4;
+  }
+  .back-arrow-reservas {
+    left: 0;
+  }
+  .next-arrow-reservas {
+    right: 0;
+  }
+  .navigation-arrows-reservas:hover {
+    border: none;
+    opacity: 1;
+  }
+  .navigation-arrows-reservas i {
+    font-size: 14px;
+  }
+  div.divider-reserva {
+    height: 82.2%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .booking-calendar > div > div.react-datepicker {
+    padding: 36px 13.2% 0;
+  }
+  .booking-calendar .react-datepicker__header {
+    margin-bottom: 26px;
+  }
+  .booking-calendar .react-datepicker__day-name {
+    width: 14px;
+  }
+  .header-calendar-reservas {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+  .navigation-arrows-reservas {
+    position: relative;
+    height: auto;
+    width: auto;
+    background: transparent;
+    border-radius: 0;
+    color: var(--three-color);
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    top: 0;
+  }
+  .back-arrow-reservas {
+    left: 0;
+  }
+  .next-arrow-reservas {
+    right: 0;
+  }
+  .navigation-arrows-reservas:hover {
+    border: 0;
+    opacity: 1;
+  }
+  .navigation-arrows-reservas i {
+    font-size: 14px;
+  }
+  div.divider-reserva {
+    display: none;
+  }
+}

@@ -1,0 +1,275 @@
+.header {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  box-shadow: 0px 1px 6px grey;
+  z-index: 100;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    justify-items: center;
+    align-items: flex-end;
+    
+}
+
+.logo-img{
+position: relative;
+margin-left: 1rem;
+width: 60px;
+height: 45px;
+}
+
+.slogan{
+    font-weight: 300;
+    font-size: 18px;
+    font-style: italic;
+    line-height: 23px;
+    margin-bottom: 12px;
+    margin-left: 10px;
+    color: black;
+    display: flex;
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo-db{
+    width: 68px; 
+    height: 50px;
+  }
+
+.inputs-header-logged {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  gap: 10px;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.inputs-header {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: right; */
+  gap: 10px;
+  margin-right: 20px;
+}
+
+.user-info{
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.crearCuenta,
+.iniciarSesion,
+.reservas,
+.administracion {
+  height: 35px;
+  background-color: white;
+  border-color: rgba(240, 87, 45, 1);
+  color: rgba(240, 87, 45, 1);
+  border-radius: 5px;
+  padding: 5px 35px;
+}
+
+.crearCuenta,
+.iniciarSesion,
+.reservas,
+.administracion:hover {
+  cursor:pointer;
+}
+
+.fa-times:hover {
+  cursor: pointer;
+}
+
+.user {
+  margin-right: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.colorUser {
+  color: rgba(240, 87, 45, 1);
+  display: flex;
+  flex-direction: row;
+}
+
+.color-links {
+  color: rgba(240, 87, 45, 1);
+}
+
+.fa-times {
+  font-size: 13px;
+  display: flex;
+  justify-content: right;
+}
+
+.saludo{
+  font-size: 0.7em;
+}
+
+.avatar {
+  border-radius: 50%;
+  background-color: rgba(49, 54, 63, 1);
+  height: 27px;
+  width: 27px;
+  color: white;
+  font-size: 17px;
+  margin-left: auto;
+  margin-top: 13px;
+  margin-right: 3px;
+}
+/* REVISAR TODO AVATAR */
+.iniciales-avatar {
+  display: flex;
+  justify-content: center;
+  padding: 3px 14px;
+}
+
+.hola {
+  display: flex;
+}
+
+/* pantalla 2 Mobile crearCuenta */
+@media screen and (max-width:  480px){
+  .slogan{
+    display: none;
+  }
+  
+
+.crearCuenta,
+.iniciarSesion,
+.reservas,
+.administracion:hover {
+  cursor:pointer;
+}
+
+.user {
+  margin-right: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.colorUser {
+  color: rgba(240, 87, 45, 1);
+  display: flex;
+  flex-direction: row;
+}
+
+.fa-times {
+  font-size: 13px;
+  display: flex;
+  justify-content: right;
+}
+
+.saludo{
+  font-size: 0.7em;
+}
+
+.fa-times:hover {
+  cursor: pointer;
+}
+
+.hola-burger{
+  display: flex;
+  justify-content: right;
+}
+
+.colorUser-burger{
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+}
+
+.iniciales-avatar-burger {
+  display: flex;
+  justify-content: center;
+  padding: 9px 14px;
+}
+
+.avatar-burger {
+  border-radius: 50%;
+  background-color: rgba(49, 54, 63, 1);
+  height: 40px;
+  width: 40px;
+  color: white;
+  font-size: 17px;
+  margin-left: auto;
+  margin-top: 13px;
+  margin-right: 11px;
+  margin-bottom: 5px;
+}
+.saludo{
+  margin-right: -20px;
+  font-size: 0.7em;
+}
+
+.opciones-links-burger{
+  height: 65vh;
+  display: flex;
+    flex-direction: row;
+    align-content: flex-end;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-right: 20px;
+}
+
+.linea-horizontal {
+  height: 1px;
+  width: 90%;
+  background-color: black;
+  margin-top: 4px;
+  margin-left: 5%;
+}
+
+.opciones-header-burger {
+  background-color: rgba(240, 87, 45, 1);
+  margin-top: -14px;
+  height: 100px;
+}
+}
+@media screen and (min-width: 480px) and (max-width:  768px){
+  .slogan{
+    display: none;
+  }
+
+  .reservas,
+  .administracion{
+    padding: 5px 10px;
+  }
+}
+
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 200; /* Stay on top */
+  top: 0;
+  right: 0;
+  background-color: white; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+.sidenav-show{
+  height: 100vh; /* 100% Full-height */
+  width: 75%; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 200; /* Stay on top */
+  top: 0;
+  right: 0;
+  background-color: white; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  pointer-events: all
+}

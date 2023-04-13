@@ -1,0 +1,284 @@
+/* INPUT */
+.calendar-buscador-input {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+    border: 0;
+    border-radius: 5px;
+}
+/* Placeholder del input */
+.calendar-buscador-input svg {
+    height: 20px;
+    margin-right: 8px;
+    margin-left: 9px;
+    color: var(--three-color);
+    opacity: 0.35;
+}
+.calendar-buscador-input p {
+    font-size: 14px;
+    color: #7F7F7F;
+}
+
+/* POPPER CALENDARIO */
+/* Tamaño del calendario */
+.popper-calendar-buscador {
+    width: 51.5%;
+    height: 359px;
+    z-index: 99;
+}
+/* Condición para que ocupe el heigth indicado arriba */
+div.popper-calendar-buscador > div,
+div.popper-calendar-buscador > div > div.react-datepicker {
+    height: 100%;
+}
+
+/* HEADER CALENDARIO BUSCADOR */
+/* se pone relative para que las flechas en absolute encajen en este como contenedor */
+.header-calendar-buscador {
+    margin-bottom: 22px;
+    font-size: 14px;
+    position: relative;
+}
+
+/* FLECHAS DE NAVEGACIÓN */
+.navigation-arrows-buscador {
+    height: 19px;
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: #666666;
+    opacity: 0.4;
+}
+.navigation-arrows-buscador:hover {
+    opacity: 1;
+}
+.back-arrow-buscador {
+    left: 0;
+}
+.next-arrow-buscador {
+    right: 0;
+}
+/* permite cambiar el tamaño del icono de las flechas */
+.navigation-arrows-buscador i .svg-inline--fa.fa-w-10 {
+    width: 100%;
+    height: 100%;
+}
+
+/* DIVISOR */
+.divider-buscador {
+    position: absolute;
+    border: 1px solid #A8A8A8;
+    height: 82.5%;
+}
+
+/* BOTON APLICAR */
+.react-datepicker .calendar-button-buscador {
+    width: 29.3%;
+    position: absolute;
+    right: 4.4%;
+    bottom: 18px;
+    height: 40px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* DISEÑO DE CALENDARIO */
+.popper-calendar-buscador > div > div.react-datepicker {
+    width: 100%;
+    padding: 25px 4.4% 0;
+    display: flex;
+    justify-content: center;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0px 0px 5px 5px;
+    gap: 8.7%;
+}
+/* Para que los meses encajen en el contenedor */
+.popper-calendar-buscador .react-datepicker__month-container {
+    width: 100%;
+}
+/* Diseño de header */
+.popper-calendar-buscador .react-datepicker__header {
+    /* distancia entre header y month_container */
+    margin-bottom: 26px;
+}
+/* Nombre de meses */
+.popper-calendar-buscador .react-datepicker__current-month {
+    font-weight: 500;
+}
+/* Nombres de los días */
+.popper-calendar-buscador .react-datepicker__day-names {
+    display: flex;
+    justify-content: space-between;
+    gap: 4.4%;
+    font-size: 12px;
+    font-weight: 700;
+}
+/* Tamaño del contenedor del nombre los días */
+.popper-calendar-buscador .react-datepicker__day-name {
+    width: 14.55px;
+    color: var(--three-color);
+}
+/* Contenedor de los días del 1-31 */
+.popper-calendar-buscador .react-datepicker__month {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+/* contenedor fila del día 1-7 */
+.popper-calendar-buscador .react-datepicker__week {
+    display: flex;
+    justify-content: space-between;
+    gap: 4.26%;
+}
+/* contenedor del número */
+.popper-calendar-buscador .react-datepicker__day {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+/* Estilo de texto de los números */
+.buscador-day-style {
+    font-size: 12px;
+    cursor: default;
+}
+/* Es probable que no este funcionando, en calendarProducto
+no funcionó, se usó el nombre de la clase de la librería  */
+.buscador-day-style:hover {
+    background-color: var(--main-color);
+    border-radius: 50%;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* ------------------------ ESTILO DE DÍAS GENERALES - PARA TODOS LOS COMPONENTES */
+/* contenedor de día en rango sin seleccionar */
+.react-datepicker__day--in-selecting-range {
+    border-radius: 50%;
+    font-size: 12px;
+    color: #FFFFFF;
+}
+/* contenedor de día en rango seleccionado y estilos */
+.react-datepicker__day--in-range {
+    background-color: var(--main-color);
+    color: #FFFFFF;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 12px;
+}
+/* contenedor de día seleccionado por teclado */
+.react-datepicker__day--keyboard-selected {
+    background-color: var(--main-color);
+    color: #FFFFFF;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 12px;
+}
+/* rango de días cuando se está expandiendo */
+.react-datepicker__day--in-selecting-range:not(.react-datepicker__day--in-range) {
+    background-color: var(--main-color);
+    opacity: 0.5;
+}
+/* Para los rangos que se seleccionan y están fuera del mes */
+.react-datepicker__day--outside-month,
+.react-datepicker__day--outside-month:hover {
+    background-color: transparent;
+    visibility: hidden;
+}
+/* Hover para las fechas que están deshabilitadas  */
+.react-datepicker div.buscador-day-style.react-datepicker__day--disabled:hover {
+    background-color: transparent;
+    font-weight: 500;
+    text-decoration: line-through;
+    cursor:default
+}
+/* ------------------------------------------------------------------------------ */
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+    .popper-calendar-buscador {
+        width: 68.5%;
+        height: 320px;
+    }
+    .popper-calendar-buscador .react-datepicker__header {
+        margin-bottom: 15px;
+    }
+    .popper-calendar-buscador > div > div.react-datepicker {
+        padding: 38px 4.4% 0;;
+        gap: 12.2%;
+    }
+    .header-calendar-buscador {
+        margin-bottom: 12px;
+    }
+    .navigation-arrows-buscador {
+        width: 13px;
+        height: 13px;
+    }
+    .divider-buscador {
+        height: 60%;
+    }
+    .react-datepicker__week {
+        margin-bottom: 7px;
+    }
+    .react-datepicker .calendar-button-buscador {
+        right: auto;
+        width: 95%;
+        bottom: 13px;
+    }
+    .popper-calendar-buscador .react-datepicker__day {
+        width: 18px;
+        height: 18px;
+        margin-bottom: 2px;
+    }
+    .buscador-day-style {
+        font-size: 9px;
+    }
+    .buscador-day-style:hover {
+        font-size: 9px;
+    }
+    /* ------------------------ ESTILO DE DÍAS GENERALES - PARA TODOS LOS COMPONENTES */
+    .react-datepicker__day--in-selecting-range,
+    .react-datepicker__day--in-range,
+    .react-datepicker__day--keyboard-selected {
+        font-size: 9px;
+    }
+    /* ------------------------------------------------------------------------------ */
+}
+@media screen and (max-width: 480px) {
+    .calendar-buscador-input {
+        height: 36px;
+    }
+    .popper-calendar-buscador {
+        width: 95%;
+        height: 401px;
+    }
+    .react-datepicker__month-container {
+        width: 76%;
+    }
+    .divider-buscador {
+        display: none;
+    }
+    .react-datepicker .calendar-button-buscador {
+        right: auto;
+        width: 76.1%;
+    }
+    .popper-calendar-buscador > div > div.react-datepicker {
+        padding: 42px 13.2% 0;;
+        gap: 0;
+    }
+    .popper-calendar-buscador .react-datepicker__week {
+        gap: 7.6%;
+    }
+}

@@ -1,0 +1,87 @@
+.commodity-rules {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 28px;
+  gap: 28px;
+}
+.commodity-rules h1 {
+  margin-left: 3%;
+}
+.commodity-rule-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-left: 3%;
+}
+.commodity-rule-container div {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 8px;
+}
+
+@media screen and (min-width: 480px) and (max-width:  768px){
+  .commodity-rule-container {
+    display: grid;
+  }
+
+  .normas {
+    grid-column: 1 / 3;
+    grid-row: 1;
+  }
+  .salud {
+    grid-column: 2 / 4;
+    grid-row: 1 / 3;
+  }
+  .cancelacion {
+    grid-column: 1;
+    grid-row: 2 / 5;
+  }
+
+  .commodity-rule-container div h3 {
+    margin-top: 40px;
+  }
+
+  .commodity-rule-container div p {
+    margin-top: 15px;
+  }
+
+  .texto-cancelacion{
+    width: 40vw;
+  }
+  .cancelacion {
+    margin-bottom: 75px;
+  }
+
+  .commodity-rule-container div {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .commodity-rule-container {
+    flex-direction: column;
+  }
+  .commodity-rule-container div h3 {
+    margin-top: 40px;
+  }
+
+  .commodity-rule-container div p {
+    margin-top: 15px;
+  }
+
+  .commodity-rule-container div {
+    width: auto;
+  }
+
+  .texto-cancelacion{
+    width: 70vw;
+  }
+  .cancelacion {
+    margin-bottom: 75px;
+  }
+}
