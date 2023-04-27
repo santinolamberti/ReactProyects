@@ -1,0 +1,17 @@
+button{
+    color: black;
+    border: none;
+    border-radius: 15px;
+}
+
+button.account {
+    text-transform: uppercase;
+    font-weight: 600;
+    background-color: yellow;
+    height: 3rem;
+    width: 8rem;
+}
+
+button:hover {
+    cursor: pointer;
+}

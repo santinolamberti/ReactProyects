@@ -1,0 +1,23 @@
+footer {
+    width: 100%;
+    background-color: black;
+    height: 100px;
+}
+
+.footer{
+    width: 100%;
+    background-color: black;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+hr {
+    width: 30%;
+}
+
+p {
+    color: white
+}
