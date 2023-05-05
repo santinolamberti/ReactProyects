@@ -15,8 +15,8 @@ export default {
 
 const Template = (args) => <Button {...args} />;
 
-export const CrearCuenta = Template.bind({});
-CrearCuenta.args = {
+export const Registrarse = Template.bind({});
+Registrarse.args = {
   buttonType: "account",
-  label: "Crear cuenta",
+  label: "Registrarse",
 };

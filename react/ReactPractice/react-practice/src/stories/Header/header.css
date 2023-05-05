@@ -19,6 +19,10 @@
     padding: 50px;
 }
 
+.tituloHeader:hover {
+    cursor: pointer;
+}
+
 .botonesHeader {
     height: 50%;
     display: flex;
@@ -27,3 +31,15 @@
     justify-content: space-around;
     padding-right: 30px;
 }
+
+@media screen and (max-width: 800px) {
+    .botonesHeader {
+        width: 47%
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    .botonesHeader {
+        width: 47%
+    }
+  }

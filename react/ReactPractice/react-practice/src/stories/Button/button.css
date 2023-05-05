@@ -15,3 +15,11 @@ button.account {
 button:hover {
     cursor: pointer;
 }
+
+.registro {
+    text-transform: uppercase;
+    font-weight: 600;
+    background-color: yellow;
+    height: 3rem;
+    width: 33%;
+}
